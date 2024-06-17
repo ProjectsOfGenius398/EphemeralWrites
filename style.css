@@ -1,0 +1,83 @@
+.header {
+    background-color: #363E87;
+    color: white;
+    padding: 1rem;
+    height: max-content;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top:0px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+}
+
+.header .headerH1 {
+    margin: 0;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.headerH1{
+    font-size: 3rem !important;
+}
+
+.navBar .navLinks{
+    padding-top: 20px;
+    justify-content: space-around;
+    font-family: "Grandstander", cursive;
+    font-size: 2rem;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #363E87;
+}
+
+.divisionDiv{
+    height: 7px;
+    color: #422632;
+    background-color: #422632;
+}
+
+.copyRight{
+    position: fixed;
+    color: #422632;
+    bottom: 0;
+    width:100%;
+    background-color: #363E87;
+    line-height: 2.5;
+    text-align: center;
+}
+
+#clubLogoAbout{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+
+.sectionsContent{
+    margin: 20px;
+}
+
+.sections{
+    margin: 50px;
+    border: 5px solid #422632;
+    height: fit-content;
+}
+
+#aboutHeading{
+    text-align: center;
+    font-family: "Playwrite NL", cursive;
+    font-size: 4rem;
+}
+
+.h1DivSec1{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    height: fit-content; /* Full viewport height for demonstration */
+    border: 1px solid #ccc;
+    height: 200px;
+}
