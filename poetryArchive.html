@@ -2,16 +2,18 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ephemeral Writes</title>
+        <title>Ephemeral Writes : Poetry Archive</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="clubLogo-removebg-preview.png">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="poetryArchive.js"></script>
     </head>
 
     <body style="background-color: #D3D3D3;">
@@ -25,6 +27,7 @@
                 </div>    
             </a>
             <nav class="d-flex navBar">
+                <a href="#aboutUs" class="navLinks"><div class="navDiv"><h2 class="navText">About Us</h2></div></a>
                 <a href="/poetryArchive.html" class="navLinks"><div class="navDiv"><h2 class="navText">Poetry Archive</h2></div></a>
                 <a href="#" class="navLinks"><div class="navDiv"><h2 class="navText">Members</h2></div></a>
                 <a href="#" class="navLinks"><div class="navDiv"><h2 class="navText">Contact us</h2></div></a>
@@ -38,12 +41,18 @@
 
         <section id="aboutUs" class="sections">
             <div class="aboutContent sectionsContent d-flex">
-                <div><img src="clubLogo.jpg" alt="club logo" class="aboutThings" id="clubLogoAbout"></div>
-                <div style="text-align: center; width: 100%;" class="h1DivSec1"><h1 class="aboutThings" id="aboutHeading">About Us</h1></div>
+                <div style="text-align: center; width: 100%;" class="h1DivSec1"><h1 class="aboutThings" id="aboutHeading">The Archives</h1></div>
             </div>
 
             <div class="d-flex">
-                coming soon!
+                <div class="d-flex poetryWindow">
+                    <div class="poetrySnippet" onclick="showPopup()">
+                        <h1>Under Piles of Rubble</h1>
+                        Under piles of rubble are dreams that shined,<br>
+                        Bodies upon bodies, we know the truth is not kind.<br>
+                        <div style="text-align: right;"><br>Written by <i>Anant</i></div>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="copyRight">
