@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Playwrite+VN:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
@@ -56,9 +57,7 @@
 }
 
 .copyRight{
-    position: fixed;
     color: #422632;
-    bottom: 0;
     width:100%;
     background-color: #363E87;
     line-height: 2.5;
@@ -68,7 +67,6 @@
 #clubLogoAbout{
     height: 200px;
     width: 200px;
-    border-radius: 100px;
 }
 
 .sectionsContent{
@@ -76,8 +74,8 @@
 }
 
 .sections{
-    margin: 50px;
-    border: 5px solid #422632;
+    margin: 40px;
+    border: 4px solid #422632;
     height: fit-content;
 }
 
@@ -85,6 +83,7 @@
     text-align: center;
     font-family: "Playwrite AU QLD", cursive;
     font-size: 4rem;
+    font-weight: 500;
 }
 
 .h1DivSec1{
@@ -118,9 +117,9 @@
 }
 
 .aim{
-    font-family: "Playwrite AU QLD", cursive;
-    font-size: 2.25rem;
-    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 .aimRes{
