@@ -1,3 +1,6 @@
+poemTitles=[];
+poemContent=[];
+
 function showPopup() {
     Swal.fire({
         title: "Under Piles of Rubble",
