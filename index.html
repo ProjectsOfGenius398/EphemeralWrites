@@ -9,6 +9,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="clubLogo-removebg-preview.png">
+	<link rel="stylesheet" href="responsive.css">
 	<script src="main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -18,7 +19,7 @@
 <body style="background-color: #1e0e01;">
 
 	<!-- Header -->
-	<header class="header d-flex align-items-center">
+	<header class="header d-flex align-items-center" id="mainHeader">
 		<a href="/EphemeralWrites/index.html" class="headerLink">
 			<div class="d-flex align-items-center">
 				<!--<img src="clubLogo-removebg-preview.png" alt="clubLogo" height="70" width="70" class="mr-3">-->
@@ -42,79 +43,73 @@
 				</div>
 			</a>
 		</nav>
+		<style>
+
+		</style>
 	</header>
 
 
 	<section id="aboutUs" class="sections">
-
-		<div class="aboutContent sectionsContent d-flex">
-			<div><img src="clubLogo-removebg-preview.png" alt="club logo" class="aboutThings" id="clubLogoAbout"></div>
-			<div style="text-align: center; width: 100%;" class="h1DivSec1">
-				<h1 class="aboutThings" id="aboutHeading">Ephemeral Writes</h1>
+		<div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+					aria-label="Slide 1" aria-current="true"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+					class=""></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+					class=""></button>
 			</div>
-		</div>
+			<div class="carousel-inner">
+				<div class="carousel-item x active">
+					<div class="carousel-caption">
+						<div class="d-flex align-content-center justify-content-around" style="width: 100%;">
+							<!--<img src="clubLogo-removebg-preview.png" alt="club logo" class="aboutThings" id="clubLogoAbout">-->
+							<h1 class="aboutThings" id="aboutHeading">Ephemeral Writes</h1>
+						</div>
+						<p class="opacity-75">Quote goes here</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/_ephemeral.writes">Follow
+								on us on Instagram!</a></p>
+					</div>
+				</div>
+				<div class="carousel-item x">
+					<div class="carousel-caption">
+						<h1>Our aim</h1>
+						<p style="text-align: left;">
+						<ul style="text-align: left;">
+							<li>To develop and seek acquaintances with skilled and growing writers.
 
-		<div class="carousel-container">
-			<div class="carousel">
-				<div class="slide">
-					<p>Slide 1 Text</p>
+							<li>To soar high in
+								the world
+								of poetry by a union of willing poets, along with a great oppurtunity for socializing
+								and enhancing
+								writing.
+							<li>To fold hidden talents out for the good and enrich their passions and seemingly trivial
+								hobbies with
+								love and support.
+						</ul>
+						</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/committeaorg">Follow us on
+								Instagram!</a></p>
+					</div>
 				</div>
-				<div class="slide">
-					<p>Slide 2 Text</p>
-				</div>
-				<div class="slide">
-					<p>Slide 3 Text</p>
+				<div class="carousel-item x">
+					<div class="carousel-caption">
+						<h1>Submit your poems!</h1>
+						<p>Get a chance to have your poems displayed on our Instagram page!</p>
+						<p><a class="btn btn-lg btn-primary" href="https://forms.gle/Bn6TbyLh1pGaZHiZ9">Submit
+								poems!</a></p>
+					</div>
 				</div>
 			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
 		</div>
-
-		<div>
-			<div class="aboutAim sectionsContent">
-				<h1 class="aim">Our aim</h1>
-				<h3 class="aimRes">To develop and seek acquaintances with skilled and growing writers. To soar high in
-					the world
-					of poetry by a union of willing poets, along with a great oppurtunity for socializing and enhancing
-					writing
-					skills. To fold hidden talents out for the good and enrich their passions and seemingly trivial
-					hobbies with
-					love and support and give people a safe space to nurture their skills. </h3>
-				<br>
-				<br>
-				<br>
-				<h1 class="aim">Our schedule</h1>
-				<h3 class="aimRes">Set in routine, all members will be provided a scheduled meeting timetable each week,
-					enlisting the different activities that will take place. The meetings will be online/offline
-					according to
-					availabity on weekends.
-					<br>
-					<br>
-					An example of these activities is - Making our own muses by getting inspiration from drawings that
-					we make,
-					coloring designs and coming up with themes for poems using those designs. Each week will have a
-					verbal
-					discussion on those poems and the best ones will get media recognition after approval.
-				</h3>
-				<br>
-				<br>
-				<br>
-				<h1 class="aim">Future plans</h1>
-				<h3 class="aimRes">
-					As a club, we for sure have some ideas in mind to improve the working of our club in the future. We
-					hope to
-					engage more audience and be the hosts of something extraordinary. Some of these things can be open
-					mics,
-					poetry submissions and such.
-					<br>
-					<br>
-					Obviously not everybody can be a part of a club, but we hope to make it open and share beautiful
-					works with
-					society and even include them in some fun activities!! Afterwards, we might even have bigger
-					authoritive goals
-					(hint hint) so drop a follow if you're interested in watching youth unfold!
-				</h3>
-			</div>
-		</div>
-	</section>
 	<section class="sections" id="poetryShowcase">
 		<div class="aboutContent sectionsContent d-flex">
 			<div style="text-align: center; width: 100%;" class="h1DivSec1">
@@ -158,9 +153,18 @@
 
 		</div>
 	</section>
-	<div class="copyRight">
-		Developed by <a href="https://github.com/Genius398" target="_blank">Anantjit Chander (Genius398)</a>
-	</div>
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
+		<p class="col-md-4 mb-0 text-white">email       phone</p>
+	  
+		<!--<ul class="nav col-md-4 justify-content-end">
+		  <li class="nav-item"><a href="https://www.instagram.com/committeaorg" class="nav-link px-2 text-white"><i class="fab fa-instagram"></i></a></li>
+		  <li class="nav-item"><a href="https://www.linkedin.com/in/committea-org-276aa0311/?original_referer=https%3A%2F%2Flinktr.ee%2F" class="nav-link px-2 text-white"><i class="fab fa-linkedin"></i></a></li>
+		  <li class="nav-item"><a href="https://www.reddit.com/r/committea/" class="nav-link px-2 text-white"><i class="fab fa-reddit"></i></a></li>
+		  <li class="nav-item"><a href="https://discord.com/invite/edzQcmbn5u" class="nav-link px-2 text-white"><i class="fab fa-discord"></i></a></li>
+		  <li class="nav-item"><a href="https://www.facebook.com/people/Commit-tea/61560628137798/" class="nav-link px-2 text-white"><i class="fab fa-facebook"></i></a></li>
+		  <li class="nav-item"><a href="https://chat.whatsapp.com/Jv0NdW444NsAep0yiUnhc2" class="nav-link px-2 text-white"><i class="fab fa-whatsapp"></i></a></li>
+		</ul>-->
+	  </footer>
 </body>
 
 </html>
