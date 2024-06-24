@@ -2,15 +2,21 @@
     background-color: #212429;
     color: white;
     padding: 1rem;
-    height: 92.4px;
+    height: fit-content;
     opacity: 100%;
     border-bottom: 7px solid #212429;
     text-align: left;
     top: 0;
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
     transition: top 0.3s;
     align-items: center;
+    z-index: 1000;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .headerLink:hover {
@@ -22,11 +28,14 @@
     margin: 0;
     color: white;
     padding-left: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
 }
 
+.unactiveLink{
+    color: #939D9E !important;
+}
 
 .navBar .navLinks {
     padding-top: 8px;
@@ -37,12 +46,14 @@
 
 .navText {
     font-size: 1rem;
+    text-decoration: none;
+    color: white;
 }
 
 .copyRight {
     color: #422632;
     width: 100%;
-    background-color: #363E87;
+    background-color: white;
     line-height: 2.5;
     text-align: center;
 }
@@ -387,7 +398,13 @@
     text-align: left;
 }
 
-.x {
+/*.x {
     background-image: url("banner3.png");
     background-size: cover;
+}*/
+
+.footer{
+    padding-left: 20px;
+    padding-right: 20px;
+    
 }
