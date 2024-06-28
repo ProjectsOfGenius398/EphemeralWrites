@@ -8,18 +8,26 @@
 	<title>Ephemeral Writes</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="other.js"></script>
+	<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"></script>
+	<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link rel="shortcut icon" href="clubLogo-removebg-preview.png">
 	<link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="carousel.css">
+	<link rel="stylesheet" href="carousel.css">
 	<script src="main.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="firebase.js" type="module"></script>
+	
+	<script type="module" src="firebase-auth.js"></script>
+	<script type="module" src="firebase-app.js"></script>
 </head>
 
-<body style="background-color: #1e0e01;">
+<body style="background-color: #1e0e01;" onload="firebaseLoad()">
 
 	<!-- Header -->
 	<header class="header d-flex align-items-center justify-content-between" id="mainHeader">
@@ -66,31 +74,53 @@
 								on us on Instagram!</a></p>
 					</div>
 				</div>
-		    </div>
-        </div>
-
-		<div class="d-flex">
-            <h1 style="text-align: center;">Coming soon!</h1>
-			<!--<div class="d-flex poetryWindow">
-				<div class="poetrySnippet" onclick="showPopup(0)">
-					<h1>Under Piles of Rubble</h1>
-					Under piles of rubble are dreams that shined,<br>
-					Bodies upon bodies, the truth is not kind.<br>
-					<div style="text-align: right;"><br>Written by <i>Anant</i></div>
-				</div>
 			</div>
-            <div class="d-flex poetryWindow">
-				<div class="poetrySnippet" onclick="showPopup(1)">
-					<h1>If walls could hear</h1>
-					If walls could hear what all could they know,
-					<div style="text-align: right;"><br>Written by <i>Anant</i></div>
-				</div>
-			</div>-->
 		</div>
 
-	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-		<p class="col-md-4 mb-0 text-white">&copy Ephemeral Writes. All rights reserved</p>
-	</footer>
+		<div class="d-flex">
+			<div class="blogContainer container">
+				<button onclick="showLoginPopup()" class="btn btn-primary btn-danger"
+					style="margin-left: 1008.775px;">Add blog</button>
+				<div class="blogPost">
+					<div class="card">
+						<img src="blog-image1.jpg" class="card-img-top" alt="Blog Image 1">
+						<div class="card-body">
+							<h5 class="card-title">Blog Post Title 1</h5>
+							<p class="card-text">A brief description or excerpt of the blog post.</p>
+							<a href="#" class="btn btn-primary">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="blogPost">
+					<div class="card">
+						<img src="blog-image2.jpg" class="card-img-top" alt="Blog Image 2">
+						<div class="card-body">
+							<h5 class="card-title">Blog Post Title 2</h5>
+							<p class="card-text">A brief description or excerpt of the blog post.</p>
+							<a href="#" class="btn btn-primary">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="blogPost">
+					<div class="card">
+						<img src="blog-image3.jpg" class="card-img-top" alt="Blog Image 3">
+						<div class="card-body">
+							<h5 class="card-title">Blog Post Title 3</h5>
+							<p class="card-text">A brief description or excerpt of the blog post.</p>
+							<a href="#" class="btn btn-primary">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 text-white">&copy Ephemeral Writes. All rights reserved</p>
+		</footer>
+		<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  
+		<!-- Firebase Auth -->
+		<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </body>
 
 </html>
