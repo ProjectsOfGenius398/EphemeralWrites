@@ -58,59 +58,31 @@
 
 
 	<section id="aboutUs" class="sections">
-		<div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item x active">
-					<div class="carousel-caption">
-						<div class="d-flex align-content-center justify-content-around" style="width: 100%;">
-							<!--<img src="clubLogo-removebg-preview.png" alt="club logo" class="aboutThings" id="clubLogoAbout">-->
-							<h1 class="aboutThings" id="aboutHeading">The Blog</h1>
-						</div>
-						<p class="opacity-75">A blog for the club! All activies shall be recorded here.</p>
-						<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/_ephemeral.writes">Follow
-								on us on Instagram!</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item x active">
+                    <div class="carousel-caption">
+                        <div class="d-flex align-content-center justify-content-around" style="width: 100%;">
+                            <!--<img src="clubLogo-removebg-preview.png" alt="club logo" class="aboutThings" id="clubLogoAbout">-->
+                            <h1 class="aboutThings" id="aboutHeading">The Blog</h1>
+                        </div>
+                        <p class="opacity-75">A blog for the club! All activies shall be recorded here.</p>
+                        <p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/_ephemeral.writes">Follow
+                                on us on Instagram!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="d-flex">
-			<div class="blogContainer container">
-				<button onclick="showLogin()" class="btn btn-primary btn-danger" style="margin-left: 1008.775px;">Add
-					blog</button>
-				<div class="blogPost">
-					<div class="card">
-						<img src="blog-image1.jpg" class="card-img-top" alt="Blog Image 1">
-						<div class="card-body">
-							<h5 class="card-title">Blog Post Title 1</h5>
-							<p class="card-text">A brief description or excerpt of the blog post.</p>
-							<a href="#" class="btn btn-primary">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="blogPost">
-					<div class="card">
-						<img src="blog-image2.jpg" class="card-img-top" alt="Blog Image 2">
-						<div class="card-body">
-							<h5 class="card-title">Blog Post Title 2</h5>
-							<p class="card-text">A brief description or excerpt of the blog post.</p>
-							<a href="#" class="btn btn-primary">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="blogPost">
-					<div class="card">
-						<img src="blog-image3.jpg" class="card-img-top" alt="Blog Image 3">
-						<div class="card-body">
-							<h5 class="card-title">Blog Post Title 3</h5>
-							<p class="card-text">A brief description or excerpt of the blog post.</p>
-							<a href="#" class="btn btn-primary">Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="align-content-center">
+            <div style="text-align: right; width: 1110px;">
+                <button onclick="showLogin()" class="btn btn-primary btn-danger">Add
+                    blog</button>
+            </div>
+            <div id="blogPosts" class="blogContainer container" style="width:100%;"></div>
+        </div>
 
+    </section>
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 			<p class="col-md-4 mb-0 text-white">&copy Ephemeral Writes. All rights reserved</p>
 		</footer>
@@ -118,110 +90,117 @@
 
 
 <script>
-    // Firebase initialization
-    const firebaseConfig = {
-        apiKey: "AIzaSyCX2sz_A0O_wOQIP38YB6_dBoJKt-klnho",
-        authDomain: "ephemeralwrites-vid306.firebaseapp.com",
-        projectId: "ephemeralwrites-vid306",
-        storageBucket: "ephemeralwrites-vid306.appspot.com",
-        messagingSenderId: "966518366890",
-        appId: "1:966518366890:web:bc6aae29e0a1f5f0a926d3",
-        measurementId: "G-MVV879D57G"
-    };
+	// Firebase initialization
+	const firebaseConfig = {
+		apiKey: "AIzaSyCX2sz_A0O_wOQIP38YB6_dBoJKt-klnho",
+		authDomain: "ephemeralwrites-vid306.firebaseapp.com",
+		projectId: "ephemeralwrites-vid306",
+		storageBucket: "ephemeralwrites-vid306.appspot.com",
+		messagingSenderId: "966518366890",
+		appId: "1:966518366890:web:bc6aae29e0a1f5f0a926d3",
+		measurementId: "G-MVV879D57G"
+	};
 
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const analytics = firebase.analytics(app);
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+	// Initialize Firebase
+	const app = firebase.initializeApp(firebaseConfig);
+	const analytics = firebase.analytics(app);
+	const auth = firebase.auth();
+	const db = firebase.firestore();
 
-    function showLogin() {
-        Swal.fire({
-            title: 'Login',
-            html: `<input type="email" id="email" class="swal2-input" placeholder="Email">
+	function firebaseLoad() {
+		loadPosts();
+	}
+
+	function showLogin() {
+		Swal.fire({
+			title: 'Login',
+			html: `<input type="email" id="email" class="swal2-input" placeholder="Email">
                    <input type="password" id="password" class="swal2-input" placeholder="Password">`,
-            confirmButtonText: 'Sign in',
-            showCancelButton: true,
-            preConfirm: () => {
-                const email = Swal.getPopup().querySelector('#email').value;
-                const password = Swal.getPopup().querySelector('#password').value;
-                if (!email || !password) {
-                    Swal.showValidationMessage(`Please enter email and password`);
-                }
-                return { email: email, password: password };
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                const { email, password } = result.value;
-                firebase.auth().signInWithEmailAndPassword(email, password)
-                    .then((userCredential) => {
-                        Swal.fire('Login successful!', '', 'success').then(() => {
-                            showAddBlog();
-                        });
-                    })
-                    .catch((error) => {
-                        Swal.fire('Error', error.message, 'error');
-                    });
-            }
-        });
-    }
+			confirmButtonText: 'Sign in',
+			showCancelButton: true,
+			preConfirm: () => {
+				const email = Swal.getPopup().querySelector('#email').value;
+				const password = Swal.getPopup().querySelector('#password').value;
+				if (!email || !password) {
+					Swal.showValidationMessage(`Please enter email and password`);
+				}
+				return { email: email, password: password };
+			}
+		}).then((result) => {
+			if (result.isConfirmed) {
+				const { email, password } = result.value;
+				firebase.auth().signInWithEmailAndPassword(email, password)
+					.then((userCredential) => {
+						Swal.fire('Login successful!', '', 'success').then(() => {
+							showAddBlog();
+						});
+					})
+					.catch((error) => {
+						Swal.fire('Error', error.message, 'error');
+					});
+			}
+		});
+	}
 
-    function showAddBlog() {
-        Swal.fire({
-            title: 'New Blog Post',
-            html: `<input type="text" id="title" class="swal2-input" placeholder="Title">
+	function showAddBlog() {
+		Swal.fire({
+			title: 'New Blog Post',
+			html: `<input type="text" id="title" class="swal2-input" placeholder="Title">
                    <textarea id="content" class="swal2-textarea" placeholder="Content"></textarea>`,
-            confirmButtonText: 'Add Post',
-            showCancelButton: true,
-            preConfirm: () => {
-                const title = Swal.getPopup().querySelector('#title').value;
-                const content = Swal.getPopup().querySelector('#content').value;
-                if (!title || !content) {
-                    Swal.showValidationMessage(`Please enter title and content`);
-                }
-                return { title: title, content: content };
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                const { title, content } = result.value;
-                addBlogPost(title, content);
-            }
-        });
-    }
+			confirmButtonText: 'Add Post',
+			showCancelButton: true,
+			preConfirm: () => {
+				const title = Swal.getPopup().querySelector('#title').value;
+				const content = Swal.getPopup().querySelector('#content').value;
+				if (!title || !content) {
+					Swal.showValidationMessage(`Please enter title and content`);
+				}
+				return { title: title, content: content };
+			}
+		}).then((result) => {
+			if (result.isConfirmed) {
+				const { title, content } = result.value;
+				addBlogPost(title, content);
+			}
+		});
+	}
 
-    async function addBlogPost(title, content) {
-        try {
-            await firebase.firestore().collection("blogPosts").add({
-                title: title,
-                content: content,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            });
-            Swal.fire('Post added!', '', 'success');
-            loadPosts();
-        } catch (e) {
-            Swal.fire('Error', e.message, 'error');
-        }
-    }
+	async function addBlogPost(title, content) {
+		try {
+			await firebase.firestore().collection("blogPosts").add({
+				title: title,
+				content: content,
+				timestamp: firebase.firestore.FieldValue.serverTimestamp()
+			});
+			Swal.fire('Post added!', '', 'success');
+			loadPosts();
+		} catch (e) {
+			Swal.fire('Error', e.message, 'error');
+		}
+	}
 
-    async function loadPosts() {
-        const querySnapshot = await firebase.firestore().collection("blogPosts").get();
-        const blogPostsContainer = document.getElementById('blogPosts');
-        blogPostsContainer.innerHTML = "";
-        querySnapshot.forEach((doc) => {
-            const post = doc.data();
-            const postElement = document.createElement('div');
-            postElement.classList.add('col-md-4', 'blogPost');
-            postElement.innerHTML = `
+	async function loadPosts() {
+		try {
+			const querySnapshot = await firebase.firestore().collection("blogPosts").orderBy('timestamp', 'desc').get();
+			const blogPostsContainer = document.getElementById('blogPosts');
+			blogPostsContainer.innerHTML = "";
+			querySnapshot.forEach((doc) => {
+				const post = doc.data();
+				const postElement = document.createElement('div');
+				postElement.classList.add('blogPost');
+				postElement.innerHTML = `
                 <div class="card">
-                    <img src="default-image.jpg" class="card-img-top" alt="Blog Image">
                     <div class="card-body">
                         <h5 class="card-title">${post.title}</h5>
                         <p class="card-text">${post.content}</p>
                     </div>
                 </div>`;
-            blogPostsContainer.appendChild(postElement);
-        });
-    }
+				blogPostsContainer.appendChild(postElement);
+			});
+		} catch (e) {
+			console.error("Error loading posts: ", e);
+		}
+	}
 </script>
 
 
