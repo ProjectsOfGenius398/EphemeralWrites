@@ -13,8 +13,9 @@
 	<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>	
 	<script src="other.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-	<link rel="shortcut icon" href="clubLogo-removebg-preview.png">
+	<link rel="shortcut icon" href="ClubLogo.jpg">
 	<link rel="stylesheet" href="responsive.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="carousel.css">
 	<script src="main.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -23,38 +24,38 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: #1e0e01;">
+<body class="wompwomp">
 
 	<!-- Header -->
 	<header class="header d-flex align-items-center justify-content-between" id="mainHeader">
-		<a href="/EphemeralWrites/index.html" class="headerLink">
+		<a href="/EphemeralWrites/index.html" class="headerLink hoverthings">
 			<div class="d-flex align-items-center">
 				<!--<img src="clubLogo-removebg-preview.png" alt="clubLogo" height="70" width="70" class="mr-3">-->
 				<h1 class="mb-0 headerH1">Ephemeral Writes</h1>
 			</div>
 		</a>
 		<nav class="d-flex navBar">
-			<a href="/EphemeralWrites/poetryArchive.html" class="navLinks">
+			<a href="/EphemeralWrites/poetryArchive.html" class="navLinks  hoverthings">
 				<div class="navDiv">
 					<h2 class="navText">Poetry Archive</h2>
 				</div>
 			</a>
-			<a href="#" class="navLinks">
+			<a href="/EphemeralWrites/members.html" class="navLinks hoverthings">
 				<div class="navDiv">
 					<h2 class="navText">Members</h2>
 				</div>
 			</a>
-			<a href="members.html" class="navLinks">
+			<a href="members.html" class="navLinks  hoverthings">
 				<div class="navDiv">
 					<h2 class="navText">Competitons and Events</h2>
 				</div>
 			</a>
-			<a href="/EphemeralWrites/blog.html" class="navLinks">
+			<a href="/EphemeralWrites/blog.html" class="navLinks  hoverthings">
 				<div class="navDiv">
 					<h2 class="navText">Blog</h2>
 				</div>
 			</a>
-			<a href="#" class="navLinks">
+			<a href="#" class="navLinks  hoverthings">
 				<div class="navDiv">
 					<h2 class="navText">Contact us</h2>
 				</div>
@@ -83,14 +84,14 @@
 							<!--<img src="clubLogo-removebg-preview.png" alt="club logo" class="aboutThings" id="clubLogoAbout">-->
 							<h1 class="aboutThings" id="aboutHeading">Ephemeral Writes</h1>
 						</div>
-						<p class="opacity-75">Quote goes here</p>
+						<p class="opacity-75">For when poets come together, their hearts beat with so much more than love</p>
 						<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/_ephemeral.writes">Follow
 								on us on Instagram!</a></p>
 					</div>
 				</div>
 				<div class="carousel-item x">
 					<div class="carousel-caption">
-						<h1>Our aim</h1>
+						<h1 class="aboutThings" id="aboutHeading">Our aim</h1>
 						<p style="text-align: left;">
 						<ul style="text-align: left;">
 							<li>To develop and seek acquaintances with skilled and growing writers.
@@ -105,15 +106,15 @@
 								love and support.
 						</ul>
 						</p>
-						<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/committeaorg">Follow us on
+						<p><a class="btn btn-lg btn-primary" target="_blank" href="https://www.instagram.com/committeaorg">Follow us on
 								Instagram!</a></p>
 					</div>
 				</div>
 				<div class="carousel-item x">
 					<div class="carousel-caption">
-						<h1>Submit your poems!</h1>
+						<h1 class="aboutThings" id="aboutHeading">Submit your poems!</h1>
 						<p>Get a chance to have your poems displayed on our Instagram page!</p>
-						<p><a class="btn btn-lg btn-primary" href="https://forms.gle/Bn6TbyLh1pGaZHiZ9">Submit poems!</a></p>
+						<p><a class="btn btn-lg btn-primary hoverthings" href="https://forms.gle/Bn6TbyLh1pGaZHiZ9">Submit poems!</a></p>
 					</div>
 				</div>
 			</div>
@@ -128,34 +129,32 @@
 		</div>
 	</section>
 
-	<section class="sections" id="membersSection">
-		<br>
-		<h1 style="font-size: 60px !important; color: white; text-align: center;">Core Members</h1>
-		<div class="content d-flex justify-content-around membersCont">
-			<div class="membersCard">
-				<img src="coreImages/ShiraliBansal.jpg" alt="Club President" class="membersImage">
-				<div class="membersMainText">
-					<h2 class="memberMemText">Shirali Bansal</h2>
-					<h3 class="memberMemDesc">Club President</h3>
-				</div>
-			</div>
-			<div class="membersCard">
-				<img src="coreImages/SaanviRana.jpg" alt="Strategist" class="membersImage">
-				<div class="membersMainText">
-					<h2 class="memberMemText">Saanvi Rana</h2>
-					<h3 class="memberMemDesc">Strategist</h3>
-				</div>
-			</div>
-			<div class="membersCard">
-				<img src="coreImages/NaysaChopra.jpg" alt="Secretary" class="membersImage">
-				<div class="membersMainText">
-					<h2 class="memberMemText">Naysa Chopra</h2>
-					<h3 class="memberMemDesc">Secretary</h3>
-				</div>
+	<section class="sections" id="whyEphemeral">
+		<h1 class="aboutThings hoverthings" id="aboutHeading">
+			Why Ephemeral?
+		</h1>
+		<div class="container d-flex">
+			<img src="ClubLogo.jpg" id="whyImage" class="hoverthings">
+			<div style="text-align: left;">
+				<p>blah blah blah</p>
 			</div>
 		</div>
 	</section>
-	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+	<br>
+	<br>
+	<section class="sections" id="presidentMessagewhyEphemeral">
+		<h1 class="aboutThings hoverthings" id="aboutHeading">
+			Message from the President
+		</h1>
+		<div class="container d-flex justify-content-between align-content-between">
+			<img src="coreImages/ShiraliBansal.jpg" id="whyImage" class="hoverthings">
+			<div>
+				<p>blah blah blah</p>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top footer">
 		<p class="col-md-4 mb-0 text-white">&copy Ephemeral Writes. All rights reserved</p>
 	</footer>
 </body>

@@ -1,10 +1,47 @@
+:root {
+    --mainPink: #A77380;
+    --teaBrown: #997553;
+    --almostBlack: #050908;
+    --kindaGreen: #1A1819;
+    --flowerSomething: #A99483;
+    --flowerCenter: #C1950E;
+    --brownCenter: #150800;
+    --mainColorIg: #7d2b41;
+}
+
+body {
+    background-color: var(--mainColorIg) !important;
+}
+
+@keyframes diagonal {
+    from {
+        transform: rotateY(-90deg)
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes enlarge {
+    from {
+        transform: scale(100%)
+    }
+
+    to {
+        transform: scale(120%);
+    }
+}
+
+
+
 .header {
-    background-color: #212429;
+    background-color: var(--kindaGreen);
     color: white;
     padding: 1rem;
     height: fit-content;
     opacity: 100%;
-    border-bottom: 7px solid #212429;
+    border-bottom: 7px solid var(--kindaGreen);
     text-align: left;
     top: 0;
     position: fixed;
@@ -33,15 +70,15 @@
     align-items: center;
 }
 
-.unactiveLink{
-    color: #939D9E !important;
-}
-
 .navBar .navLinks {
     padding-top: 8px;
     justify-content: space-around;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+.aboutThings {
+    color: white;
 }
 
 .navText {
@@ -73,7 +110,7 @@
 
 #aboutHeading {
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 500;
     padding-bottom: 50px;
 }
@@ -89,8 +126,8 @@
 }
 
 .poetryWindow {
-    width: 250px;
-    height: 300px;
+    width: 90%;
+    height: 50% !important;
     border: none;
     padding: 10px;
     overflow-y: auto;
@@ -115,13 +152,13 @@
 }
 
 
-.footer{
+.footer {
     padding-left: 20px;
     padding-right: 20px;
     bottom: 0;
 }
 
-.swal2-show{
+.swal2-show {
     width: 650px;
 }
 
@@ -129,41 +166,74 @@
     width: 1110px;
     margin: 0 auto;
 }
+
 .blogPost .card {
     width: 100%;
     height: fit-content;
 }
 
-.blogPost, .card{
+.blogPost,
+.card {
     width: 100% !important;
     padding-top: 15px;
     padding-bottom: 15px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
-
 }
+
+.membersCard, .membersImage {
+    background-color: #bc8d99;
+    animation: diagonal 1s ease-in;
+    width: 400px;
+    
+}
+
 
 .membersImage{
-    width: 192.04px;
-    height: 192.04px;
-    border-radius: 25px;
-}
-
-.membersCard{
-    padding: 50px;
-    background-color: #130a01;
-}
-
-.membersCont{
-    background-color: #130a01;
-    border-radius: 50px;
-}
-
-.membersMainText{
-    color: white;
+    height: 386px !important;
     text-align: center;
 }
 
-#membersSection{
-    padding-left: 50px;
-    padding-right: 50px;
+.membersCard{
+    width: 420px !important;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+#whyImage {
+    height: 300px;
+    width: 300px;
+    border-radius: 1000px;
+    border-color: #924F61;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.hoverthings:hover {
+    transform: scale(105%) !important;
+}
+
+.hoverthings {
+    transition: transform 1s !important;
+}
+
+.membersDiv{
+    justify-content: space-around !important;
+    height: 507px;
+    padding: 10px;
+}
+
+#memHead{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: white;
+}
+
+#memText{
+    text-align: center;
+    padding-bottom: 10px;
 }

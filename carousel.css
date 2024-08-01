@@ -1,3 +1,13 @@
+:root{
+    --mainPink: #A77380;
+    --teaBrown: #997553;
+    --almostBlack: #050908;
+    --kindaGreen: #1A1819;
+    --flowerSomething: #A99483;
+    --flowerCenter: #C1950E;
+    --brownCenter: #150800;
+    --mainColorIg: #7d2b41;
+}
 
 .carousel {
     position: relative
@@ -10,13 +20,13 @@
 .carousel-inner {
     position: relative;
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .carousel-inner::after {
     display: block;
     clear: both;
-    content: ""
+    content: "";
 }
 
 .carousel-item {
@@ -280,7 +290,16 @@
     text-align: left;
 }
 
-/*.x {
-    background-image: url("banner3.png");
-    background-size: cover;
-}*/
+.carousel{
+    background: linear-gradient(to bottom, 
+                            #A77380, 
+                            #924F61 50%, 
+                            #7d2b41 100%, 
+                            rgba(125, 43, 65, 0) 100%);
+                            background: linear-gradient(to bottom, 
+                            #A77380, 
+                            #924F61 50%, 
+                            #7d2b41 100%, 
+                            rgba(125, 43, 65, 0) 100%);
+
+}
