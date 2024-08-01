@@ -191,6 +191,7 @@ body {
 .membersImage{
     height: 386px !important;
     text-align: center;
+    border-radius: 10px;
 }
 
 .membersCard{
@@ -220,7 +221,7 @@ body {
 
 .membersDiv{
     justify-content: space-around !important;
-    height: 507px;
+    height: 517px;
     padding: 10px;
 }
 
