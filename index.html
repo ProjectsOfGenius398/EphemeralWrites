@@ -3,28 +3,19 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ephemeral Writes</title>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-	<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"></script>	
-	<script type="module" src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>	
-	<script src="other.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-	<link rel="shortcut icon" href="ClubLogo.jpg">
-	<link rel="stylesheet" href="responsive.css">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-	<link rel="stylesheet" href="carousel.css">
-	<script src="main.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="stylesheet" href="carousel.css">
+	<link rel="shortcut icon" href="ClubLogo.jpg">
 </head>
 
-<body class="wompwomp">
+<body class="wompwomp" onload="showRandomWord()">
 
 	<!-- Header -->
 	<header class="header d-flex align-items-center justify-content-between" id="mainHeader">
@@ -47,7 +38,7 @@
 			</a>
 			<a href="#" class="navLinks  hoverthings">
 				<div class="navDiv">
-					<h2 class="navText">Competitons and Events</h2>
+					<h2 class="navText">Join the club!</h2>
 				</div>
 			</a>
 			<a href="/EphemeralWrites/blog.html" class="navLinks  hoverthings">
@@ -56,7 +47,7 @@
 				</div>
 			</a>
 			<a href="#" class="navLinks  hoverthings">
-				<div class="navDiv">
+				<div class="navDiv" onclick="contactUs()">
 					<h2 class="navText">Contact us</h2>
 				</div>
 			</a>
@@ -84,7 +75,8 @@
 							<!--<img src="clubLogo-removebg-preview.png" alt="club logo" class="aboutThings" id="clubLogoAbout">-->
 							<h1 class="aboutThings" id="aboutHeading">Ephemeral Writes</h1>
 						</div>
-						<p class="opacity-75">For when poets come together, their hearts beat with so much more than love</p>
+						<p class="opacity-75 helpMe">For when poets come together, their hearts beat with so much more
+							than love</p>
 						<p><a class="btn btn-lg btn-primary" href="https://www.instagram.com/_ephemeral.writes">Follow
 								on us on Instagram!</a></p>
 					</div>
@@ -92,21 +84,20 @@
 				<div class="carousel-item x">
 					<div class="carousel-caption">
 						<h1 class="aboutThings" id="aboutHeading">Our aim</h1>
-						<p style="text-align: left;">
-						<ul style="text-align: left;">
-							<li>To develop and seek acquaintances with skilled and growing writers.
+						<p class="helpUs">
+							To develop and seek acquaintances with skilled and growing writers.
+							To soar high in
+							the world
+							of poetry by a union of willing poets, along with a great oppurtunity for socializing
+							and enhancing
+							writing.
+							To fold hidden talents out for the good and enrich their passions and seemingly trivial
+							hobbies with
+							love and support.
 
-							<li>To soar high in
-								the world
-								of poetry by a union of willing poets, along with a great oppurtunity for socializing
-								and enhancing
-								writing.
-							<li>To fold hidden talents out for the good and enrich their passions and seemingly trivial
-								hobbies with
-								love and support.
-						</ul>
 						</p>
-						<p><a class="btn btn-lg btn-primary" target="_blank" href="https://www.instagram.com/committeaorg">Follow us on
+						<p><a class="btn btn-lg btn-primary" target="_blank"
+								href="https://www.instagram.com/committeaorg">Follow us on
 								Instagram!</a></p>
 					</div>
 				</div>
@@ -114,7 +105,8 @@
 					<div class="carousel-caption">
 						<h1 class="aboutThings" id="aboutHeading">Submit your poems!</h1>
 						<p>Get a chance to have your poems displayed on our Instagram page!</p>
-						<p><a class="btn btn-lg btn-primary hoverthings" href="https://forms.gle/Bn6TbyLh1pGaZHiZ9">Submit poems!</a></p>
+						<p><a class="btn btn-lg btn-primary hoverthings"
+								href="https://forms.gle/Bn6TbyLh1pGaZHiZ9">Submit poems!</a></p>
 					</div>
 				</div>
 			</div>
@@ -129,34 +121,83 @@
 		</div>
 	</section>
 
-	<section class="sections" id="whyEphemeral">
-		<h1 class="aboutThings hoverthings" id="aboutHeading">
-			Why Ephemeral?
-		</h1>
-		<div class="container d-flex">
-			<img src="ClubLogo.jpg" id="whyImage" class="hoverthings">
-			<div style="text-align: left;">
-				<p>blah blah blah</p>
+	<section class="notCarousel">
+		<section class="sections inNotCarousel" id="whyEphemeral" style="padding-bottom: 20px !important; padding-top: 20px!important;">
+			<h1 class="hoverthings" id="aboutWhy">
+				Why Ephemeral?
+			</h1>
+			<div class="container d-flex">
+				<img src="ClubLogo.jpg" id="whyImage" class="hoverthings">
+				<div style="text-align: left;">
+					<p>blah blah blah</p>
+				</div>
 			</div>
+		</section>
+		<br>
+		<br>
+		<div class="d-flex justify-content-around">
+			<section class="sections inNotCarousel infoSections" style="top: 0;">
+				<div>
+					<h1 class="wordOfTheDay" id="aboutWhy" style="padding: 0px !important;">Today's Poetic Device</h1>
+					<hr style="background-color: white; height: 2px;">
+					<div class="wordOfTheDay" id="wordDisplay">
+						<h2 id="word" class="underWord" style="font-weight:500;">Epic</h2>
+						<p id="wordDef" class="underWord">A long narrative poem detailing the heroic deeds and adventures of legendary figures.</p>
+					</div>
+					<div class="d-flex align-content-around justify-content-between">
+						<p style="font-size: 1rem; text-align: left;" class="underWord"> </p>
+						<p style="font-size: 1rem; text-align: right;" class="underWord"> </p>	
+					</div>
+				</div>
+			</section>
+
+			<section class="sections inNotCarousel infoSections">
+				<div class="">
+					<h1 class="wordOfTheDay" id="aboutWhy" style="padding: 0px !important;">Featured Poem!</h1>
+					<hr style="background-color: white; height: 2px;">
+					<div class="wordOfTheDay" id="featuredPoem">
+						<h2 class="underWord" style="font-weight:500;">Poem Title</h2>
+						<p class="wordDef" class="underWord" style="text-align: left !important;">First 2 lines of poem</p>
+						<div class="d-flex align-content-around justify-content-between">
+							<p style="font-size: 1rem; text-align: left;" class="underWord">written by</p>
+							<p style="font-size: 1rem; text-align: right;" class="underWord">Read more</p>	
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
 		</div>
-	</section>
-	<br>
-	<br>
-	<section class="sections" id="presidentMessagewhyEphemeral">
-		<h1 class="aboutThings hoverthings" id="aboutHeading">
-			Message from the President
-		</h1>
-		<div class="container d-flex justify-content-between align-content-between">
-			<img src="coreImages/ShiraliBansal.jpg" id="whyImage" class="hoverthings">
-			<div>
-				<p>blah blah blah</p>
+		
+		<!--section class="sections notCarousel" id="presidentMessagewhyEphemeral">
+			<h1 class="hoverthings" id="aboutWhy">
+				Message from the President
+			</h1>
+			<div class="container d-flex justify-content-between align-content-between">
+				<img src="coreImages/ShiraliBansal.jpg" id="whyImage" class="hoverthings">
+				<div>
+					<p>blah blah blah</p>
+				</div>
 			</div>
-		</div>
+		</section-->
 	</section>
-	
 	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top footer">
 		<p class="col-md-4 mb-0 text-white">&copy Ephemeral Writes. All rights reserved</p>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script type="module" src="firebaseInit.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-storage.js"></script>
+	<script src="main.js"></script>
+	<script src="other.js"></script>
+	<!--script src="homePageCrap.js"></script-->
 </body>
+
 
 </html>

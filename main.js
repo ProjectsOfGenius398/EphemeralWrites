@@ -5,6 +5,8 @@ poemContent = [
     "<div style='text-align: left;'>If walls could hear what all could they know,<br>They’d know so much that I’ve forgotten.<br>If my walls could tell you all I’ve told them,<br>You’d never want to leave this room.<br>For you might call it your room of love,<br>Where you’re nothing but loved over and over.<br><br><br><br>If my dreams could become a world to be in,<br>You’d never want to leave for the real one.<br>For you’ll find so much about yourself,<br>You’d be mesmerized by what I think of you.<br>You’d forget all that’s in the real world,<br>For it’s impossible to replicate my dreams.<br><br><br><br>More than a million things untold to you are,<br>I feel like I live in an unfinished building.<br>A building I’m scared to work on,<br>In fears of destroying what holds on so tight.<br>A building which despite my intentions,<br>Would crumble at the slightest adjustment.<br><br><br><br>I fall to pieces at the hint of your name,<br>I fall to pieces when something reminds me.<br>For now everything reminds me of you,<br>Everything does.<br>Everything that you ever liked,<br>Everything we do like.<div style='text-align:right;'><br>By <i>Anantjit Chander</i><br>June 17 2023</div></div>"]
     ;
 
+const toggleButton = document.getElementById("whyEpheDiv");
+const dropdownContent = document.getElementById("dropdownContent");
 
 /*!
   * Bootstrap v5.3.3 (https://getbootstrap.com/)
@@ -44,10 +46,23 @@ poemContent = [
     observer.observe(carousel);
 });*/
 
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("toggleButton");
+    const dropdownContent = document.getElementById("dropdownContent");
+
+    toggleButton.addEventListener("click", function() {
+        if (dropdownContent.style.maxHeight) {
+            dropdownContent.style.maxHeight = null;
+        } else {
+            dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+        }
+    });
+});
+
 // JavaScript for automatic carousel sliding and manual controls
 var myCarousel = document.getElementById('myCarousel');
 var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 3000, // Slide every 3 seconds
+  interval: 4000, // Slide every 3 seconds
   wrap: true // Allow wrap around at the end of the carousel
 });
 
@@ -74,3 +89,11 @@ function showPopup(number) {
     });
 }
 
+function contactUs(){
+    Swal.fire({
+        title: "Contact us!",
+        html: "<h3>Send us an Email! <a href='mailIdWhatever'>Enter email iD</a></h3><br><h3>Contact the President on <a href='mailIdWhatever'>enter number</a></h3>",
+        showCloseButton: true,
+        confirmButtonText: 'Exit',
+    });
+}

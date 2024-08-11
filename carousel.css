@@ -290,16 +290,7 @@
     text-align: left;
 }
 
-.carousel{
-    background: linear-gradient(to bottom, 
-                            #A77380, 
-                            #924F61 50%, 
-                            #7d2b41 100%, 
-                            rgba(125, 43, 65, 0) 100%);
-                            background: linear-gradient(to bottom, 
-                            #A77380, 
-                            #924F61 50%, 
-                            #7d2b41 100%, 
-                            rgba(125, 43, 65, 0) 100%);
 
+.carousel{
+    background: transparent;
 }
