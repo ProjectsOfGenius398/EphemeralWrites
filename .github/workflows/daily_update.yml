@@ -2,6 +2,8 @@ name: HTML Update
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '30 18 * * *'
 
 jobs:
   update-html:
@@ -19,8 +21,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # Add any dependencies your script requires here
-        # pip install requests
 
     - name: Run update script
       run: python updateHomeCrap.py
